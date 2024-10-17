@@ -3,6 +3,7 @@ import json
 import requests
 import telebot
 import time
+from flask import Flask
 from telegraph import Telegraph
 
 # Substitua pelo seu token do bot do Telegram
@@ -111,4 +112,15 @@ def unknown_message(message):
     bot.reply_to(message, "Desculpe, não entendi esse comando. Tente usar /buscar <nome_do_jogo>.")
 
 # Iniciar o bot
-bot.polling()
+def start_bot():
+    bot.polling()
+
+# Inicializa o Flask para manter o bot ativo
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "O bot está rodando!"
+
+if __name__ == '__main__':
+    start_bot()

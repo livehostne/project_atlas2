@@ -1,3 +1,5 @@
-pyTelegramBotAPI==4.12.0  # Para o bot do Telegram
-requests==2.31.0           # Para fazer requisições HTTP (ex: encurtar URLs)
-Telegraph==1.4.0           # Para interagir com o Telegraph
+Flask==2.0.2
+gunicorn==20.1.0
+pyTelegramBotAPI==4.10.0
+telegraph==1.4.0
+requests==2.26.0
